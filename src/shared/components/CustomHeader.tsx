@@ -1,5 +1,7 @@
+import React, { useEffect, useState } from 'react';
+
 import { AnimatePresence, motion } from 'motion/react';
-import React, { useEffect, useState } from 'react'
+import { Menu, X, } from 'lucide-react';
 
 export default function CustomHeader() {
 
@@ -22,22 +24,6 @@ export default function CustomHeader() {
         { name: 'Schedules', href: '#schedules' },
         { name: 'Location', href: '#location' },
     ];
-
-    import {
-        Menu,
-        X,
-        ArrowRight,
-        Star,
-        TrendingUp,
-        Users,
-        MapPin,
-        Phone,
-        Mail,
-        ChevronDown,
-        Facebook,
-        Instagram,
-        Twitter
-    } from 'lucide-react';
 
     return (
         <>
