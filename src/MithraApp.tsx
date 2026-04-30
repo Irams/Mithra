@@ -6,30 +6,12 @@ import CustomHeader from "./shared/components/CustomHeader";
 import CustomHero from "./shared/components/CustomHero";
 import CustomJoin from "./shared/components/CustomJoin";
 import CustomShedules from "./shared/components/CustomShedules";
-import CustomSwimmers from "./shared/components/CustomSwimmers";
 import CustomTranningGrounds from "./shared/components/CustomTranningGrounds";
+import { mokSwimmers } from './mok-data/swimmers.mok';
+import { CustomSwimmers } from './shared/components/CustomSwimmers';
 
 export default function MithraApp() {
 
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [scrolled, setScrolled] = useState(false);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 50);
-        };
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
-    const navLinks = [
-        { name: 'Home', href: '#home' },
-        { name: 'Swimmers', href: '#swimmers' },
-        { name: 'Gallery', href: '#gallery' },
-        { name: 'Coaches', href: '#coaches' },
-        { name: 'Schedules', href: '#schedules' },
-        { name: 'Location', href: '#location' },
-    ];
 
     return (
         <>
@@ -38,7 +20,7 @@ export default function MithraApp() {
 
                 <CustomHero />
 
-                <CustomSwimmers />
+                <CustomSwimmers swimmers={mokSwimmers} />
 
                 <CustomTranningGrounds />
 

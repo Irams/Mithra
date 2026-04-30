@@ -22,26 +22,26 @@ export default function CustomHero() {
                     transition={{ duration: 0.8 }}
                     className="relative z-10 text-center px-4 max-w-5xl mx-auto"
                 >
-                    <span className="text-[#B08D57] font-bold tracking-[0.4em] text-sm md:text-base mb-6 block">ENGINEERING CHAMPIONS</span>
+                    <span className="text-[#B08D57] font-bold tracking-[0.4em] text-sm md:text-base mb-6 block">Entrenando Campeones</span>
                     <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-white mb-8 leading-tight">
                         Mithra Elite <br />
-                        <span className="italic text-[#B08D57]">Excellence</span>
+                        <span className="italic text-[#B08D57]">Team</span>
                     </h1>
                     <p className="text-white/80 text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed font-light">
-                        Join the region's premier high-performance swimming program. Elite coaching, state-of-the-art facilities, and a culture of victory.
+                        "El trabajo dure ocurre cuanadie está mirando" - Michael Phelps. Únete a nuestro equipo de natación de élite y entrena como un campeón.Ven y forma parte de la familia Mithra Elite Team!
                     </p>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                         <button className="w-full sm:w-auto px-10 py-5 bg-[#B08D57] hover:bg-[#96784a] text-white font-bold rounded shadow-2xl transition-all hover:-translate-y-1 tracking-widest text-sm">
-                            VIEW CLASS SCHEDULE
+                            HORARIOS
                         </button>
                         <button className="w-full sm:w-auto px-10 py-5 border-2 border-white/30 hover:border-white text-white font-bold rounded backdrop-blur-sm transition-all tracking-widest text-sm">
-                            TOUR THE FACILITY
+                            ÚNETE AHORA
                         </button>
                     </div>
                 </motion.div>
 
                 <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-white/40">
-                    <ChevronDown size={40} />
+                    <ChevronDown size={50} />
                 </div>
             </section>
 

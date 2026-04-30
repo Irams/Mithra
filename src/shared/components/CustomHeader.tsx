@@ -1,30 +1,17 @@
-import React, { useEffect, useState } from 'react';
-
+import useHeader from '@/src/mithra/hooks/useHeader';
+import { Menu, X } from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
-import { Menu, X, } from 'lucide-react';
 
 export default function CustomHeader() {
 
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [scrolled, setScrolled] = useState(false);
+    const {
+        isMenuOpen,
+        setIsMenuOpen,
+        scrolled,
+        navLinks
+    } = useHeader()
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 50);
-        };
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
-    const navLinks = [
-        { name: 'Home', href: '#home' },
-        { name: 'Swimmers', href: '#swimmers' },
-        { name: 'Gallery', href: '#gallery' },
-        { name: 'Coaches', href: '#coaches' },
-        { name: 'Schedules', href: '#schedules' },
-        { name: 'Location', href: '#location' },
-    ];
-
+    /*  */
     return (
         <>
             {/* Header */}
@@ -61,7 +48,7 @@ export default function CustomHeader() {
 
                     <div className="flex items-center gap-4">
                         <button className="hidden lg:block bg-[#B08D57] hover:bg-[#96784a] text-white px-6 py-2.5 rounded font-bold text-xs tracking-widest transition-all shadow-lg hover:shadow-[#B08D57]/20">
-                            JOIN THE TEAM
+                            ¿Te interesa?
                         </button>
                         <button
                             className="md:hidden text-white p-2"
@@ -95,7 +82,7 @@ export default function CustomHeader() {
                                 ))}
                                 <li>
                                     <button className="w-full bg-[#B08D57] text-white py-3 rounded font-bold text-sm tracking-widest">
-                                        JOIN THE TEAM
+                                        ¿Te interesa?
                                     </button>
                                 </li>
                             </ul>
